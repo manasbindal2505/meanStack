@@ -1,4 +1,4 @@
 //creating a database 
 module.exports={
-    url: "mongodb://localhost/myfirstdb"
+    url: "mongodb://localhost:27017/contactList"
 };

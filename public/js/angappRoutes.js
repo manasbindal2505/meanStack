@@ -14,6 +14,11 @@ angular.module("angappRoutes",[]).config(["$routeProvider","$locationProvider",f
         .when("/contact",{
             templateUrl :"views/contact.html",
             controller  :"ContactController"
+        })
+        //register page
+        .when("/register",{
+            templateUrl :"views/register.html",
+            controller  :"RegisterController"
         });
 
     $locationProvider.html5Mode(true);

@@ -1,1 +1,1 @@
-angular.module("angularSpa",["ngRoute","angappRoutes","HomeCtrl","AboutCtrl","ContactCtrl","AboutService"]);
+angular.module("angularSpa",["ngRoute","angappRoutes","HomeCtrl","AboutCtrl","ContactCtrl","RegisterCtrl","AboutService"]);
