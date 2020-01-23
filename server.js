@@ -9,7 +9,7 @@ var mongoose        =require("mongoose");
 var db=require("./backendconfiguration/db");
 
 //Mongoose Connection
-mongoose.connect(db.url)
+mongoose.connect("mongodb://localhost:27017/contactList", {useNewUrlParser:true,useUnifiedTopology:true} );
 
 //Check Connection  
 mongoose.connection.on("connected",function(){
