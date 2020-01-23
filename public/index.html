@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Single Page Applications</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--//link css files-->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <!--//link js files-->
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular-route/angular-route.min.js"></script>
+
+        <!--link angular js files-->
+        <script src="js/controllers/HomeCtrl.js"></script>
+        <script src="js/controllers/AboutCtrl.js"></script>
+        <script src="js/controllers/ContactCtrl.js"></script>
+        <script src="js/services/AboutService.js"></script>
+        <script src="js/angappRoutes.js"></script>
+        <script src="js/angapp.js"></script>
+    </head>
+    <body ng-app="angularSpa" ng-controller="HomeController">
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="">MEAN STACK</a>
+                    </div>
+
+                    <ul class="navbar navbar-nav">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+            </nav>
+
+            <div ng-view></div>
+        </div>
+        
+    </body>
+</html>
