@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Show</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <button type="submit" ng-click="retrieve_data();">Show Details</button>
+            </div>
+            <table>
+                <tr>
+                    <th><h1>First Name</h1></th>
+                    <th><h1>Last Name</h1></th>
+                    <th><h1>Mobile Number</h1></th>
+                </tr>
+                <tr ng-repeat="data in receive_data">
+                    <td>{{data.firstname}}</td>
+                    <td>{{data.lastname}}</td>
+                    <td>{{data.number}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
