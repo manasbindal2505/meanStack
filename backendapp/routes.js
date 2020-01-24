@@ -16,12 +16,9 @@ module.exports = function(expobj){
         });
     });
 
-    expobj.get("*",function(req,res){
-        res.sendfile("./public/index.html");
-    });
-};
+    
 
-module.exports  =   function(expobj){
+
     expobj.post("/api/abouts",(req,res)=>{
         //display data on the console
         console.log("First Name:"+req.body.firstname+"\nLast Name:"+req.body.lastname+"\nMobile Number:"+req.body.number);
@@ -41,5 +38,18 @@ module.exports  =   function(expobj){
                 res.json({msg:"Added Contact"});
             }
         });
+    });
+
+    expobj.get("/api/contacts",function(req,res){
+        Contact.find(function(err,contacts){
+            if(err){
+                console.log(err);
+            }
+            res.json(contacts);
+        });
+    }); 
+
+    expobj.get("*",function(req,res){
+        res.sendfile("./public/index.html");
     });
 };
