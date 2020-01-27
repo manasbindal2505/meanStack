@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Edit Update</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <button type="submit" ng-click="retrieve_data();" class="btn btn-secondary">Show Details to Update</button>
+            </div></br>
+            <table class="text-center table table-striped" ng-init="retrieve_data_ind()">
+                <tr>
+                    <th><h3>First Name</h3></th>
+                    <th><h3>Last Name</h3></th>
+                    <th><h3>Mobile Number</h3></th>
+                    <th><h3>Operation</h3></th>
+                </tr>
+                <tr ng-repeat="data in receive_data_ind">
+                    <td><input class="form-control" ng-model="data.firstname" 
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"/></td>
+                    
+                    <td><input class="form-control" ng-model="data.lastname" 
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"/></td>
+                    <td><input class="form-control" ng-model="data.number" required maxlength="10"
+                        onkeypress="return (event.charCode > 47 && event.charCode < 58)"/></td>
+                    <td><button class="btn btn-success" ng-click="update_data(data._id)"><a href="/show">Update</a></button></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
