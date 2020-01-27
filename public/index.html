@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--//link css files-->
         <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
         <!--//link js files-->
         <script src="libs/angular/angular.min.js"></script>
         <script src="libs/angular-route/angular-route.min.js"></script>
@@ -18,6 +19,7 @@
         <script src="js/controllers/ContactCtrl.js"></script>
         <script src="js/controllers/RegisterCtrl.js"></script>
         <script src="js/controllers/ShowCtrl.js"></script>
+        <script src="js/controllers/UpdateCtrl.js"></script>
         <script src="js/services/AboutService.js"></script>
         <script src="js/angappRoutes.js"></script>
         <script src="js/angapp.js"></script>
@@ -29,12 +31,13 @@
                         <a class="navbar-brand" href="">MEAN STACK</a>
                     </div>
 
-                    <ul class="navbar navbar-nav">
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/register">Register</a></li>
-                        <li><a href="/show">Show Details</a></li>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/show">Show Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/update">Update Contacts</a></li>
                     </ul>
             </nav>
 
